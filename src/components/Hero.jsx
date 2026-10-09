@@ -22,8 +22,12 @@ export default function Hero() {
             Hi, I'm <br />
             <span className="bg-gradient-to-r from-brand to-[#7fd0ff] bg-clip-text text-transparent">{profile.name}</span>
           </h1>
-          <p className="mb-8 mt-4 text-2xl sm:text-3xl">{profile.role} <span className="text-brand-light">{profile.roleAccent}</span>
-          <p className="mb-8 text-muted">Software Development student. I build web apps with React and Node.js.</p>
+          <p className="mt-4 text-2xl sm:text-3xl">
+          {profile.role} <span className="text-brand-light">{profile.roleAccent}</span>
+          </p>
+
+          <p className="mb-8 mt-2 text-base text-muted sm:text-lg">
+          Software Development student. I build web apps with React and Node.js.
           </p>
           <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 font-semibold shadow-[0_0_30px_rgba(47,107,255,0.45)] transition hover:-translate-y-0.5 hover:bg-[#4a7fff]">
             Let's Work Together <span aria-hidden>↗</span>
@@ -37,7 +41,7 @@ export default function Hero() {
           <div className="relative mx-auto aspect-square w-[min(340px,78vw)] sm:w-[400px]">
             <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-full border border-brand/40 bg-[radial-gradient(circle_at_50%_40%,#2f6bff,#0a1a5e_70%)] shadow-[0_0_90px_rgba(47,107,255,0.35)]">
               {imgOk ? (
-                <img src={profile.photo} alt={profile.name} onError={() => setImgOk(false)} className="h-full w-full object-cover object-top" />
+                <img src={profile.photo} alt={profile.name} onError={() => setImgOk(false)} className="absolute inset-0 h-full w-full object-cover object-top" />
               ) : (
                 <svg viewBox="0 0 100 100" className="mt-[20%] w-[70%]"><circle cx="50" cy="32" r="18" fill="#0a1230" /><path d="M10 100c0-26 18-42 40-42s40 16 40 42z" fill="#0a1230" /></svg>
               )}
